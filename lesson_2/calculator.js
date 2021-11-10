@@ -1,35 +1,58 @@
 const readline = require('readline-sync');
 
-console.log('Welcome to Calculator!');
+function prompt(message) {
+  console.log(`=> ${message}`);
+}
 
-console.log('Enter the first number.');
-let number1 = +readline.question();
+function isInvalidNumber(number) {
+  return number.trimStart() === '' || Number.isNaN(Number(number));
+}
 
-console.log('Enter the second number.');
-let number2 = +readline.question();
+prompt('Welcome to Calculator!');
 
-console.log(
+prompt('Enter the first number.');
+let number1 = readline.question();
+
+while (isInvalidNumber(number1)) {
+  prompt('Please enter a valid number.');
+  number1 = readline.question();
+}
+
+prompt('Enter the second number.');
+let number2 = readline.question();
+
+while (isInvalidNumber(number2)) {
+  prompt('Please enter a valid number.');
+  number2 = readline.question();
+}
+
+prompt(
   'What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide'
 );
 let operation = readline.question();
+
+while (!['1', '2', '3', '4'].includes(operation)) {
+  prompt('Must choose 1, 2, 3 or 4');
+  operation = readline.question();
+}
 
 let result;
 
 switch (operation) {
   case '1':
-    result = number1 + number2;
+    result = +number1 + +number2;
     break;
   case '2':
-    result = number1 - number2;
+    result = +number1 - +number2;
     break;
   case '3':
-    result = number1 * number2;
+    result = +number1 * +number2;
     break;
   case '4':
-    result = number1 / number2;
+    result = +number1 / +number2;
     break;
   default:
     result = 'Invalid numbers provided.';
 }
 
-console.log(`The result is ${result}`);
+prompt(`The result is ${result}`);
