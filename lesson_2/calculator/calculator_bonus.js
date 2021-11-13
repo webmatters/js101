@@ -1,7 +1,7 @@
 const readline = require('readline-sync');
 
 const MESSAGES = require('./messages.json');
-const LANGUAGE = 'en';
+const LANGUAGE = 'es';
 
 function prompt(message) {
   let output = messages(message, LANGUAGE);
