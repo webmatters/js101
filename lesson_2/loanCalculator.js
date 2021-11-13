@@ -45,7 +45,7 @@ while (repeat) {
       (+monthlyRate / (1 - Math.pow(1 + +monthlyRate, -+loanMonths)));
   }
 
-  prompt(`Your monthly loan payment is $${monthlyPayment.toFixed(2)}`);
+  prompt(`Your monthly loan payment is $${monthlyPayment.toFixed(2)}.`);
 
   prompt(`Enter 'y' to calculate another loan payment or 'n' to quit.`);
   let answer = readline.question().trim()[0].toLowerCase();
