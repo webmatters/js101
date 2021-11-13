@@ -1,0 +1,23 @@
+{
+  "welcome": {
+    "en": "Welcome to Calculator!",
+    "es": "Bienvenido a la calculadora!"
+  },
+  "enterFirst": {
+    "en": "Enter the first number.",
+    "es": "Ingrese el primer número"
+  },
+  "enterSecond": {
+    "en": "Enter the second number.",
+    "es": "Ingrese el segundo número"
+  },
+  "invalidNumber": {
+    "en": "Please enter a valid number",
+    "es": "por favor ingrese un número valido"
+  },
+  "operation": {
+    "en": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide"
+  },
+  "invalidOperation": { "en": "Must choose 1, 2, 3 or 4" },
+  "repeat": { "en": "Perform another calculation? y for yes; n for no" }
+}
