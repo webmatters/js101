@@ -11,6 +11,8 @@ const WINNING_COMBOS = {
   spock: ['rock', 'scissors'],
 };
 
+const WINS_NEEDED = 3;
+
 let playerWinCount = 0;
 let computerWinCount = 0;
 
@@ -106,7 +108,7 @@ while (true) {
 
   displayWinner(choice, computerChoice);
 
-  if (playerWinCount >= 3 || computerWinCount >= 3) {
+  if (playerWinCount >= WINS_NEEDED || computerWinCount >= WINS_NEEDED) {
     const winner = playerWinCount > computerWinCount ? 'Player' : 'Computer';
     prompt(`${winner} is the Grand Winner! Ending program.`);
     break;
